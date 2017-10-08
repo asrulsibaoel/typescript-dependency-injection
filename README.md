@@ -1,6 +1,6 @@
-# Kalimat.ai Warehouse #
+# Example of DI Container & Class Injector #
 
-The Warehouse System for Kalimat.ai.
+The example of class Injector
 
 ### Requirements ###
 
@@ -10,9 +10,9 @@ The Warehouse System for Kalimat.ai.
 ### Setup Configuration ###
 
 * Clone or download this project
-``git clone https://bitbucket.org/asrulsibaoel/kalimat-ai.git``
+``git clone https://github.com/asrulsibaoel/typescript-dependency-injection.git``
 * Go to your root directory of the project
-``cd /path/to/kalimat-ai``
+``cd /path/to/typescript-dependency-injection``
 * Install All dependencies
 ``npm install``
 * Build and run
@@ -24,4 +24,4 @@ The Warehouse System for Kalimat.ai.
 * Please don't mess with main branch (master) if you have any doubts with your code.
 
 ### LICENSE ###
-Kata.ai All rights reserved.
+MIT.
