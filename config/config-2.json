@@ -1,0 +1,42 @@
+{
+    "components" : {
+        "store" : {
+            "file" : "components/store/memory_store.js",
+            "dependencies" : []
+        },
+        "convRepo" : {
+            "file" : "components/repo/generic_repo.js",
+            "dependencies" : ["store"],
+            "options" : {
+                "schema" : {
+                    "userId" : "int",
+                    "direction": "string",
+                    "message": "string",
+                    "timestamp" : "int"
+                }
+            }
+        },
+        "userRepo" : {
+            "file" : "components/repo/generic_repo.js",
+            "dependencies" : ["store"],
+            "options" : {
+                "schema" : {
+                    "name": "string",
+                    "gender": "string",
+                    "city": "string",
+                    "phone": "string",
+                    "email": "string"
+                }
+            }
+        },
+        "server" : {
+            "file" : "components/server/api_server.js",
+            "dependencies" : ["convRepo", "userRepo"]
+        }
+    },
+    "main" : {
+        "component" : "server",
+        "method" : "start",
+        "args" : [5000]
+    }
+}

@@ -1,0 +1,46 @@
+{
+  "name": "kalimat-ai",
+  "description": "The Warehouse System for Kalimat.ai",
+  "version": "1.0.0",
+  "author": "Asrul Sani Ariesandy",
+  "repository": {
+    "type": "git",
+    "url": "https://asrulsibaoel@bitbucket.org/asrulsibaoel/kalimat-ai.git"
+  },
+  "dependencies": {
+    "@types/chai": "^3.4.34",
+    "@types/mocha": "^2.2.35",
+    "@types/mongoose": "^4.7.2",
+    "@types/restify": "^2.0.36",
+    "@types/sinon": "^1.16.34",
+    "@types/supertest": "^2.0.0",
+    "huject": "^1.4.1",
+    "inversify": "^4.3.0",
+    "memstore": "^0.1.1",
+    "mongoose": "^4.7.5",
+    "mysql": "^2.14.1",
+    "node-dependency-injection": "^1.10.2",
+    "reflect-metadata": "^0.1.10",
+    "restify": "^4.1.1",
+    "restify-better-router": "^1.0.3",
+    "typeorm": "0.1.0-alpha.35"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "coveralls": "^2.11.16",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.2.0",
+    "sinon": "^1.17.7",
+    "supertest": "^2.0.0",
+    "tslint": "^4.2.0",
+    "tslint-eslint-rules": "^3.2.3",
+    "typescript": "^2.1.4"
+  },
+  "scripts": {
+    "lint": "tslint --project .",
+    "build": "node_modules/.bin/tsc",
+    "test": "npm run build && NODE_ENV='test' node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha test/**/*.spec.js",
+    "cover": "npm run test && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "start": "npm run build && node main_second.js"
+  }
+}
